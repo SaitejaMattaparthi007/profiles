@@ -64955,5 +64955,13 @@
         <enabled>false</enabled>
         <name>SyntheticPerm0060</name>
     </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SyntheticPerm0061</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>SyntheticPerm0062</name>
+    </userPermissions>
     <userLicense>Salesforce</userLicense>
 </Profile>
