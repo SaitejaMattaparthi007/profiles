@@ -29,23 +29,23 @@ jobs:
             restore-keys: ${{ runner.os }}-sonar
       - name: Run Codescan On Push
         if: github.event_name == 'push'
-        uses: codescan-io/codescan-scanner-action@2.0
+        uses: codescan-io/codescan-scanner-action@3.0
         with: 
           scanChangedFilesOnly: true
-          organization: prof
-          projectKey: gh-actions-new
-          codeScanUrl: https://test.codescan.io/
-          login: squ_4b76bbb879bef4c5bd0cf5fc748acb1df75b1d83
+          organization: git-ssh
+          projectKey: github-actions-1
+          codeScanUrl: https://qa.codescan.io/
+          login: squ_f4934103173af402c9105b0212ab7d0cdbf72ad2
           generateSarifFile: true
       - name: Run Codescan On PR
         if: github.event_name == 'pull_request'
-        uses: codescan-io/codescan-scanner-action@2.0
+        uses: codescan-io/codescan-scanner-action@3.0
         with: 
           scanChangedFilesOnly: true
-          organization: prof
-          projectKey: gh-actions-new
-          codeScanUrl: https://test.codescan.io/
-          login: squ_4b76bbb879bef4c5bd0cf5fc748acb1df75b1d83
+          organization: git-ssh
+          projectKey: github-actions-1
+          codeScanUrl: https://qa.codescan.io/
+          login: squ_f4934103173af402c9105b0212ab7d0cdbf72ad2
           generateSarifFile: true
           args: |
             sonar.pullrequest.branch=${{github.head_ref}}
